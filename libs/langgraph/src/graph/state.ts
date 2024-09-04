@@ -156,7 +156,7 @@ export class StateGraph<
   SD extends StateDefinition | unknown,
   S = SD extends StateDefinition ? StateType<SD> : SD,
   U = SD extends StateDefinition ? UpdateType<SD> : Partial<S>,
-  N extends string = typeof START,
+  N extends string,
   I extends StateDefinition = SD extends StateDefinition ? SD : StateDefinition,
   O extends StateDefinition = SD extends StateDefinition ? SD : StateDefinition
 > extends Graph<N, S, U, StateGraphNodeSpec<S, U>> {
